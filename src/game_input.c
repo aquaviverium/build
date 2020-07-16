@@ -6,7 +6,7 @@
 /*   By: home <home@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/06 11:30:10 by home              #+#    #+#             */
-/*   Updated: 2020/07/16 03:41:29 by home             ###   ########.fr       */
+/*   Updated: 2020/07/16 16:06:56 by home             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,4 @@ void	process_user_input(t_game_context *game_state)
 		}
 	}
 	keystate = SDL_GetKeyboardState(NULL);
-
-
 }

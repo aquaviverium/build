@@ -6,7 +6,7 @@
 /*   By: home <home@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/06 02:38:32 by home              #+#    #+#             */
-/*   Updated: 2020/07/16 03:41:25 by home             ###   ########.fr       */
+/*   Updated: 2020/07/16 16:05:47 by home             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,6 @@
 
 # include "structs.h"
 # include "window_config.h"
-# include "texture_id.h"
-
-# define NAN_VAL (0) //Once set up is done, code should compile with this macro deleted.
 
 void		SDLU_start(t_display *dest);
 void		SDLU_close(t_display *display);
