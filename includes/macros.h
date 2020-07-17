@@ -1,34 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   SDL_initialize.c                                   :+:      :+:    :+:   */
+/*   macros.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: home <home@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/06/06 05:22:09 by home              #+#    #+#             */
-/*   Updated: 2020/07/16 16:07:09 by home             ###   ########.fr       */
+/*   Created: 2020/07/17 00:04:48 by home              #+#    #+#             */
+/*   Updated: 2020/07/17 00:29:16 by home             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "master.h"
+#ifndef MACRO_H
+# define MACRO_H
 
-void	SDLU_start(t_display *dest)
+/*
+** Can also be replaced with macros.
+** Not sure of the benifits and disadvantages,
+** of a marco vs enum in this situation.
+*/
+
+enum fabric_api
 {
-	SDL_Window	*window;
+	NO_OP		= ('\0'),
+	SET_FABRIC	= ('S'),
+	GET_FABRIC	= ('G'),
+};
 
-	SDL_Init(SDL_INIT_EVERYTHING);
-	window = SDL_CreateWindow(
-				WIN_TITLE,
-				WIN_POS_X, WIN_POS_Y,
-				WIN_WIDTH, WIN_HEIGHT,
-				SDL_WINDOW_SHOWN
-	);
-	dest->renderer = SDL_CreateRenderer(window, -1, 0);
-	dest->window = window;
-}
+# define FAILURE (0)
+# define SUCCESS (1)
 
-void	SDLU_close(t_display *display)
-{
-	SDL_DestroyWindow(display->window);
-	SDL_Quit();
-}
+#endif

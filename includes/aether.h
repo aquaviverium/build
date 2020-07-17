@@ -1,18 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   update.c                                           :+:      :+:    :+:   */
+/*   aether.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: home <home@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/03 20:52:34 by home              #+#    #+#             */
-/*   Updated: 2020/07/16 16:07:12 by home             ###   ########.fr       */
+/*   Created: 2020/07/16 23:09:18 by home              #+#    #+#             */
+/*   Updated: 2020/07/16 23:27:34 by home             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "master.h"
+#ifndef AETHER_H
+# define AETHER_H
 
-void		update_game_state(t_game_context *game_state)
+typedef	struct	planck_tile
 {
-	game_state->ticks++;
-}
+	int			quanta;
+}				t_aether;
+
+#endif

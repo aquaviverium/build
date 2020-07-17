@@ -1,25 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   fabric.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: home <home@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/06/06 02:31:10 by home              #+#    #+#             */
-/*   Updated: 2020/07/17 03:16:47 by home             ###   ########.fr       */
+/*   Created: 2020/07/16 23:38:32 by home              #+#    #+#             */
+/*   Updated: 2020/07/17 03:14:42 by home             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "universe.h"
+#ifndef FABRIC_H
+# define FABRIC_H
 
-int	main(void)
+# include "aether.h"
+
+typedef	struct	spacetime
 {
-	t_fabric fabric;
+	t_aether	*g0;
+	t_aether	*g1;
 
-	set_fabric(&fabric);
-	while (get_display()->active == true)
-	{
-		out();
-	}
-	return (0);
-}
+	t_aether	*grid;
+}				t_fabric;
+
+void		set_fabric(t_fabric *fabric);
+t_fabric	*get_fabric(void);
+#endif

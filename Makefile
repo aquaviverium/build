@@ -8,16 +8,24 @@ BIN_DIR = bin/
 
 # List of all the source files.
 SRC_NAMES = \
-	game_input \
 	main \
-	render \
+	time \
+
+OUT_NAMES = \
 	SDL_initialize \
-	update \
+	input \
+	out \
+
+API_NAMES = \
+	API_fabric \
 
 # List of all the source files, folders are to be added by
 # including a $(addprefix, DIR_NAME, $(DIR_FILES))
 FILE_NAMES = \
 	$(SRC_NAMES) \
+	$(addprefix out/, $(OUT_NAMES)) \
+	$(addprefix API/, $(API_NAMES)) \
+
 
 SRCS = $(addsuffix .c, $(addprefix $(SRC_DIR), $(FILE_NAMES)))
 # Object files will be built to BIN_DIR. They will build the

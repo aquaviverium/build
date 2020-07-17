@@ -1,38 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   structs.h                                          :+:      :+:    :+:   */
+/*   time.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: home <home@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/06/06 03:05:42 by home              #+#    #+#             */
-/*   Updated: 2020/07/16 16:05:49 by home             ###   ########.fr       */
+/*   Created: 2020/07/03 20:52:34 by home              #+#    #+#             */
+/*   Updated: 2020/07/16 23:18:54 by home             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef STRUCTS_H
-# define STRUCTS_H
+#include "universe.h"
 
-#include <SDL2/SDL.h>
-#include <stdbool.h>
-
-typedef struct	s_display
+void		next(void)
 {
-	SDL_Window		*window;
-	SDL_Renderer	*renderer;
-}				t_display;
-
-typedef struct	s_game_context
-{
-	bool		active;
-
-	SDL_Texture	*texture;
-	SDL_Rect	*src_rect;
-
-	int			ticks;
-
-	bool		game_over;
-
-}				t_game_context;
-
-#endif
+	return ;
+}

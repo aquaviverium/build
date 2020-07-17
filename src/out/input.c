@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   game_input.c                                       :+:      :+:    :+:   */
+/*   input.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: home <home@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/06 11:30:10 by home              #+#    #+#             */
-/*   Updated: 2020/07/16 16:06:56 by home             ###   ########.fr       */
+/*   Updated: 2020/07/17 03:00:08 by home             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "master.h"
+#include "universe.h"
 
-void	process_user_input(t_game_context *game_state)
+void	process_user_input(void)
 {
 	SDL_Event		e;
 	const Uint8		*keystate;
@@ -21,7 +21,7 @@ void	process_user_input(t_game_context *game_state)
 	{
 		if (e.type == SDL_QUIT)
 		{
-			game_state->active = false;
+			get_display()->active = false;
 			break ;
 		}
 	}

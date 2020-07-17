@@ -1,17 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   window_config.h                                    :+:      :+:    :+:   */
+/*   out.h                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: home <home@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/06/06 05:25:29 by home              #+#    #+#             */
-/*   Updated: 2020/07/16 16:11:37 by home             ###   ########.fr       */
+/*   Created: 2020/06/06 03:05:42 by home              #+#    #+#             */
+/*   Updated: 2020/07/17 02:49:20 by home             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WINDOW_CONFIG_H
-# define WINDOW_CONFIG_H
+#ifndef OUT_H
+# define OUT_H
+
+# include <SDL2/SDL.h>
+# include <SDL_image.h>
+# include <stdbool.h>
 
 # define WIN_TITLE "HADEAN"
 
@@ -22,5 +26,21 @@
 # define WIN_POS_Y (50)
 
 # define TILE_SIZE (8)
+
+typedef struct	s_display
+{
+	bool			active;
+	SDL_Window		*window;
+	SDL_Renderer	*renderer;
+}				t_display;
+
+t_display	*get_display(void);
+
+void		SDLU_start(t_display *dest);
+void		SDLU_close(void);
+
+void		process_user_input(void);
+
+void		out(void);
 
 #endif
