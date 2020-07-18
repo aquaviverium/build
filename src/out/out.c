@@ -6,7 +6,7 @@
 /*   By: home <home@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/04 02:38:19 by home              #+#    #+#             */
-/*   Updated: 2020/07/18 01:04:01 by home             ###   ########.fr       */
+/*   Updated: 2020/07/18 01:05:45 by home             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,12 +32,14 @@ void	fill_Rect(SDL_Rect *rect, int x, int y)
 
 void	render_loop(void)
 {
-	t_display	*display;
-	SDL_Rect	dest;
 	int			row;
 	int			col;
+	SDL_Rect	dest;
+	t_fabric	*fabric;
+	t_display	*display;
 
 	row = 0;
+	fabric = get_fabric();
 	display = get_display();
 	while (row < (WIN_WIDTH / TILE_SIZE))
 	{
@@ -65,7 +67,6 @@ void	render_loop(void)
 **/
 void	out(void)
 {
-	get_fabric();
 	render_loop();
 	SDL_RenderPresent(get_display()->renderer);
 	SDL_RenderClear(get_display()->renderer);

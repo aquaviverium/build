@@ -1,7 +1,7 @@
 - [ ] Pixel per pixel capable interactions.
 	- Double buffer
 	- pthreads
-- [ ] Visual way of displaying the current state.
+- [X] Visual way of displaying the current state.
 	- AlphaColorMod
 	- SDL shall act as a module that can me swapped
 	- The simulation shall be able to run by the removal of SDL, but without a display.
