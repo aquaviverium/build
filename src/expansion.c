@@ -1,26 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   expansion.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: home <home@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/06/06 02:31:10 by home              #+#    #+#             */
-/*   Updated: 2020/07/18 01:37:33 by home             ###   ########.fr       */
+/*   Created: 2020/07/18 01:20:29 by home              #+#    #+#             */
+/*   Updated: 2020/07/18 01:37:05 by home             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "universe.h"
 
-int	main(void)
+void	aethersynthesis(t_fabric *fabric)
 {
-	t_fabric fabric;
+	int	i;
+	int	size;
 
-	set_fabric(&fabric);
-	aethersynthesis(&fabric);
-	while (get_display()->active == true)
+	i = 0;
+	size = 10;
+	fabric->g0 = malloc(sizeof(*fabric->g0) * (size));
+	fabric->g1 = malloc(sizeof(*fabric->g1) * (size));
+	while (i < size)
 	{
-		out();
+		fabric->g0[i] = calloc(size, sizeof(*(fabric->g0[i])));
+		fabric->g1[i] = calloc(size, sizeof(*(fabric->g1[i])));
+		i++;
 	}
-	return (0);
 }
