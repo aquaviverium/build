@@ -3,7 +3,7 @@
 	- pthreads
 - [X] Visual way of displaying the current state.
 	- AlphaColorMod
-	- SDL shall act as a module that can me swapped
+	- SDL shall act as a module that can be swapped
 	- The simulation shall be able to run by the removal of SDL, but without a display.
 - [ ] Propagation of quanta throughout the aether.
 	- Aether structure
