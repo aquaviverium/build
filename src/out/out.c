@@ -6,7 +6,7 @@
 /*   By: home <home@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/04 02:38:19 by home              #+#    #+#             */
-/*   Updated: 2020/07/18 00:44:45 by home             ###   ########.fr       */
+/*   Updated: 2020/07/18 01:04:01 by home             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,27 +32,25 @@ void	fill_Rect(SDL_Rect *rect, int x, int y)
 
 void	render_loop(void)
 {
-	// int	i;
-
-	// i = 0;
-	// while ()
-	// {
-	// 	i++;
-	// }
-
 	t_display	*display;
-	SDL_Rect dest;
+	SDL_Rect	dest;
+	int			row;
+	int			col;
 
-	fill_Rect(&dest, 5, 4);
-
+	row = 0;
 	display = get_display();
-	SDL_SetTextureColorMod(display->texture, 255, 0, 0);
-	SDL_RenderCopy(display->renderer, display->texture, NULL, &dest);
-
-	fill_Rect(&dest, 5, 5);
-
-	SDL_SetTextureColorMod(display->texture, 0, 255, 0);
-	SDL_RenderCopy(display->renderer, display->texture, NULL, &dest);
+	while (row < (WIN_WIDTH / TILE_SIZE))
+	{
+		col = 0;
+		while (col < (WIN_HEIGHT / TILE_SIZE))
+		{
+			fill_Rect(&dest, col, row);
+			SDL_SetTextureColorMod(display->texture, 0, 0, row * col);
+			SDL_RenderCopy(display->renderer, display->texture, NULL, &dest);
+			col++;
+		}
+		row++;
+	}
 }
 
 /**
