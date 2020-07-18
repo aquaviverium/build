@@ -6,7 +6,7 @@
 /*   By: home <home@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/06 05:22:09 by home              #+#    #+#             */
-/*   Updated: 2020/07/17 03:00:46 by home             ###   ########.fr       */
+/*   Updated: 2020/07/17 23:50:01 by home             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	SDLU_start(t_display *dest)
 {
 	SDL_Window	*window;
 
-	printf("SDL is initalizing.\n");
+	printf(BOLDBLUE"SDL"COLOR_RESET" is "BOLDCYAN"initalizing.\n");
 	SDL_Init(SDL_INIT_EVERYTHING);
 	window = SDL_CreateWindow(
 				WIN_TITLE,
@@ -27,6 +27,10 @@ void	SDLU_start(t_display *dest)
 	dest->active = true;
 	dest->renderer = SDL_CreateRenderer(window, -1, 0);
 	dest->window = window;
+	dest->texture = IMG_LoadTexture(dest->renderer, "resources/quanta.bmp");
+
+	if (dest->texture != NULL)
+		printf(BOLDBLUE"Texture"COLOR_RESET" loaded "BOLDGREEN"successfully.\n"COLOR_RESET);
 
 	atexit(SDLU_close);
 }
@@ -35,7 +39,7 @@ void	SDLU_close(void)
 {
 	SDL_DestroyWindow(get_display()->window);
 	SDL_Quit();
-	printf("SDL exited successfully.\n");
+	printf(BOLDBLUE"SDL"COLOR_RESET" exited "BOLDGREEN"successfully.\n");
 }
 
 /*

@@ -6,7 +6,7 @@
 /*   By: home <home@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/06 03:05:42 by home              #+#    #+#             */
-/*   Updated: 2020/07/17 02:49:20 by home             ###   ########.fr       */
+/*   Updated: 2020/07/17 23:38:00 by home             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 # include <SDL2/SDL.h>
 # include <SDL_image.h>
 # include <stdbool.h>
+
+# include "color.h"
 
 # define WIN_TITLE "HADEAN"
 
@@ -32,6 +34,7 @@ typedef struct	s_display
 	bool			active;
 	SDL_Window		*window;
 	SDL_Renderer	*renderer;
+	SDL_Texture		*texture;
 }				t_display;
 
 t_display	*get_display(void);

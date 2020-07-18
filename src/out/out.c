@@ -6,11 +6,22 @@
 /*   By: home <home@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/04 02:38:19 by home              #+#    #+#             */
-/*   Updated: 2020/07/17 03:15:57 by home             ###   ########.fr       */
+/*   Updated: 2020/07/17 23:16:22 by home             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "universe.h"
+
+void	render_loop(void)
+{
+	// int	i;
+
+	// i = 0;
+	// while ()
+	// {
+	// 	i++;
+	// }
+}
 
 /**
 * Function that shall handle the visualization of the simulation.
