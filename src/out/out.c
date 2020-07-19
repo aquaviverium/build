@@ -6,7 +6,7 @@
 /*   By: home <home@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/04 02:38:19 by home              #+#    #+#             */
-/*   Updated: 2020/07/19 00:51:05 by home             ###   ########.fr       */
+/*   Updated: 2020/07/19 01:02:28 by home             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,6 +83,7 @@ void	out(void)
 	SDL_RenderPresent(get_display()->renderer);
 	SDL_RenderClear(get_display()->renderer);
 
+	usleep(900000);
 
 	process_user_input();
 }

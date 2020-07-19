@@ -6,16 +6,18 @@
 /*   By: home <home@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/06 03:05:42 by home              #+#    #+#             */
-/*   Updated: 2020/07/18 00:51:56 by home             ###   ########.fr       */
+/*   Updated: 2020/07/19 00:52:54 by home             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef OUT_H
 # define OUT_H
 
+# include <stdbool.h>
+# include <unistd.h>
+
 # include <SDL2/SDL.h>
 # include <SDL_image.h>
-# include <stdbool.h>
 
 # include "color.h"
 

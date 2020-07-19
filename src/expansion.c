@@ -6,7 +6,7 @@
 /*   By: home <home@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/18 01:20:29 by home              #+#    #+#             */
-/*   Updated: 2020/07/18 22:07:13 by home             ###   ########.fr       */
+/*   Updated: 2020/07/19 00:55:58 by home             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void	aethersynthesis(t_fabric *fabric)
 		i++;
 	}
 
-	fabric->g0[3][3].quanta = 0xFFFFFF;
+	fabric->g0[3][3].quanta = 0x0000FF;
 
 	fabric->grid = fabric->g0;
 }
