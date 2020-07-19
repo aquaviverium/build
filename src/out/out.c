@@ -6,7 +6,7 @@
 /*   By: home <home@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/04 02:38:19 by home              #+#    #+#             */
-/*   Updated: 2020/07/19 01:02:28 by home             ###   ########.fr       */
+/*   Updated: 2020/07/19 01:28:06 by home             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,11 @@
 
 void	fill_color(int *r, int *g, int *b, int hex_color)
 {
-	*r = (hex_color >> 16) & 0xFF;
-	*g = (hex_color >>  8) & 0xFF;
+	// *r = (hex_color >> 16) & 0xFF;
+	// *g = (hex_color >>  8) & 0xFF;
+	// *r = 0;
+	*r = (hex_color >>  8) & 0x5F;
+	*g = 0;
 	*b = (hex_color >>  0) & 0xFF;
 }
 
@@ -83,7 +86,7 @@ void	out(void)
 	SDL_RenderPresent(get_display()->renderer);
 	SDL_RenderClear(get_display()->renderer);
 
-	usleep(900000);
+	usleep(100000);
 
 	process_user_input();
 }

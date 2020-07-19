@@ -6,7 +6,7 @@
 /*   By: home <home@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/03 20:52:34 by home              #+#    #+#             */
-/*   Updated: 2020/07/19 01:01:20 by home             ###   ########.fr       */
+/*   Updated: 2020/07/19 01:18:28 by home             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,12 +32,17 @@ void	update_square(t_aether **dest, t_aether **src, int row, int col)
 {
 	int	split;
 
-	split = (src[row][col].quanta) / 4;
+	split = (src[row][col].quanta) / 8;
 
-	dest[(row + 1 + SP_HEIGHT) % (SP_HEIGHT)][(col + 0 + SP_WIDTH) % (SP_WIDTH)].quanta += split;
-	dest[(row - 1 + SP_HEIGHT) % (SP_HEIGHT)][(col + 0 + SP_WIDTH) % (SP_WIDTH)].quanta += split;
-	dest[(row + 0 + SP_HEIGHT) % (SP_HEIGHT)][(col + 1 + SP_WIDTH) % (SP_WIDTH)].quanta += split;
-	dest[(row + 0 + SP_HEIGHT) % (SP_HEIGHT)][(col - 1 + SP_WIDTH) % (SP_WIDTH)].quanta += split;
+	if (src[row][col].quanta > 0 && split == 0)
+		split = 4;
+
+	dest[(row + 1 + SP_HEIGHT) % (SP_HEIGHT)][(col + 0 + SP_WIDTH) % (SP_WIDTH)].quanta += split * 2;
+	dest[(row - 1 + SP_HEIGHT) % (SP_HEIGHT)][(col + 0 + SP_WIDTH) % (SP_WIDTH)].quanta += split * 2;
+	dest[(row + 0 + SP_HEIGHT) % (SP_HEIGHT)][(col + 1 + SP_WIDTH) % (SP_WIDTH)].quanta += split * 2;
+	dest[(row + 0 + SP_HEIGHT) % (SP_HEIGHT)][(col - 1 + SP_WIDTH) % (SP_WIDTH)].quanta += split * 2;
+
+	dest[row][col].quanta += split * 5;
 }
 
 void	clear_dest(t_aether **dest)
@@ -76,8 +81,6 @@ void	next(t_fabric *fabric)
 		}
 		row++;
 	}
-
-	printf("DEST: %d\n", dest[3][3].quanta);
 
 	toggle_double_buffer(fabric);
 	return ;
