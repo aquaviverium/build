@@ -6,7 +6,7 @@
 /*   By: home <home@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/06 02:31:10 by home              #+#    #+#             */
-/*   Updated: 2020/07/18 01:37:33 by home             ###   ########.fr       */
+/*   Updated: 2020/07/19 00:31:15 by home             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ int	main(void)
 	aethersynthesis(&fabric);
 	while (get_display()->active == true)
 	{
+		next(&fabric);
 		out();
 	}
 	return (0);

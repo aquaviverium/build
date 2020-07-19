@@ -6,11 +6,18 @@
 /*   By: home <home@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/04 02:38:19 by home              #+#    #+#             */
-/*   Updated: 2020/07/18 01:05:45 by home             ###   ########.fr       */
+/*   Updated: 2020/07/19 00:51:05 by home             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "universe.h"
+
+void	fill_color(int *r, int *g, int *b, int hex_color)
+{
+	*r = (hex_color >> 16) & 0xFF;
+	*g = (hex_color >>  8) & 0xFF;
+	*b = (hex_color >>  0) & 0xFF;
+}
 
 /**
 * \brief Function that constructs a SDL_Rect to be used in SDL_RenderCopy(),
@@ -38,6 +45,10 @@ void	render_loop(void)
 	t_fabric	*fabric;
 	t_display	*display;
 
+	int			r;
+	int			g;
+	int			b;
+
 	row = 0;
 	fabric = get_fabric();
 	display = get_display();
@@ -47,7 +58,8 @@ void	render_loop(void)
 		while (col < (WIN_HEIGHT / TILE_SIZE))
 		{
 			fill_Rect(&dest, col, row);
-			SDL_SetTextureColorMod(display->texture, 0, 0, row * col);
+			fill_color(&r, &g, &b, fabric->grid[row][col].quanta);
+			SDL_SetTextureColorMod(display->texture, r, g, b);
 			SDL_RenderCopy(display->renderer, display->texture, NULL, &dest);
 			col++;
 		}
@@ -70,6 +82,7 @@ void	out(void)
 	render_loop();
 	SDL_RenderPresent(get_display()->renderer);
 	SDL_RenderClear(get_display()->renderer);
+
 
 	process_user_input();
 }

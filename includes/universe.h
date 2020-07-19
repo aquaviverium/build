@@ -6,7 +6,7 @@
 /*   By: home <home@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/06 02:38:32 by home              #+#    #+#             */
-/*   Updated: 2020/07/18 01:36:29 by home             ###   ########.fr       */
+/*   Updated: 2020/07/19 00:31:01 by home             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,7 @@
 # include "out.h"
 
 void	aethersynthesis(t_fabric *fabric);
+
+void	next(t_fabric *fabric);
 
 #endif
