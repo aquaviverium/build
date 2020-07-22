@@ -14,6 +14,7 @@ SRC_NAMES = \
 
 OUT_NAMES = \
 	clerp \
+	clerp_control_flow \
 	input \
 	out \
 	SDL_initialize \

@@ -6,7 +6,7 @@
 /*   By: home <home@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/04 02:38:19 by home              #+#    #+#             */
-/*   Updated: 2020/07/21 19:50:20 by home             ###   ########.fr       */
+/*   Updated: 2020/07/22 01:00:20 by home             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,8 @@ void	render_loop(void)
 		while (col < (WIN_HEIGHT / TILE_SIZE))
 		{
 			fill_Rect(&dest, col, row);
-			fill_color(&r, &g, &b, fabric->grid[row][col].quanta);
+			set_color(fabric->grid[row][col].quanta, &r, &g, &b);
+			// fill_color(&r, &g, &b, fabric->grid[row][col].quanta);
 			SDL_SetTextureColorMod(display->texture, r, g, b);
 			SDL_RenderCopy(display->renderer, display->texture, NULL, &dest);
 			col++;
@@ -86,7 +87,7 @@ void	out(void)
 	SDL_RenderPresent(get_display()->renderer);
 	SDL_RenderClear(get_display()->renderer);
 
-	// usleep(100000);
+	// usleep(500000);
 
 	process_user_input();
 }

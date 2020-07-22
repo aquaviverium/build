@@ -6,7 +6,7 @@
 /*   By: home <home@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/06 03:05:42 by home              #+#    #+#             */
-/*   Updated: 2020/07/21 19:52:00 by home             ###   ########.fr       */
+/*   Updated: 2020/07/22 00:42:00 by home             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,8 @@ void		process_user_input(void);
 
 void		ctoRGB(int color, int *r, int *g, int *b);
 
-// void		set_color(int val, int *r, int *g, int *b);
+int			clerp(int color1, int color2, int t, int tmax);
+void		set_color(int val, int *r, int *g, int *b);
 
 void		out(void);
 

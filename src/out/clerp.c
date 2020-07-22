@@ -6,7 +6,7 @@
 /*   By: home <home@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/21 19:37:49 by home              #+#    #+#             */
-/*   Updated: 2020/07/21 19:51:14 by home             ###   ########.fr       */
+/*   Updated: 2020/07/22 00:42:57 by home             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@
 */
 int		lerp(int min, int max, int t, int tmax)
 {
+	if (tmax == 0)
+		return (0);
 	return (min + ((max - min) * t) / tmax);
 }
 
