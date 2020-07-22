@@ -13,9 +13,11 @@ SRC_NAMES = \
 	time \
 
 OUT_NAMES = \
-	SDL_initialize \
+	clerp \
 	input \
 	out \
+	SDL_initialize \
+	utils \
 
 API_NAMES = \
 	API_fabric \

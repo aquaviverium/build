@@ -6,7 +6,7 @@
 /*   By: home <home@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/06 03:05:42 by home              #+#    #+#             */
-/*   Updated: 2020/07/19 00:52:54 by home             ###   ########.fr       */
+/*   Updated: 2020/07/21 19:52:00 by home             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,10 @@ void		SDLU_start(t_display *dest);
 void		SDLU_close(void);
 
 void		process_user_input(void);
+
+void		ctoRGB(int color, int *r, int *g, int *b);
+
+// void		set_color(int val, int *r, int *g, int *b);
 
 void		out(void);
 
