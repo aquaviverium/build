@@ -6,7 +6,7 @@
 /*   By: home <home@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/03 20:52:34 by home              #+#    #+#             */
-/*   Updated: 2020/07/22 01:12:39 by home             ###   ########.fr       */
+/*   Updated: 2021/03/02 21:43:51 by home             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,5 +84,6 @@ void	next(t_fabric *fabric)
 
 	printf("AT: %d\n", fabric->grid[0][0].quanta);
 	toggle_double_buffer(fabric);
+	usleep(80000);
 	return ;
 }

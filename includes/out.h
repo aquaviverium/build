@@ -6,7 +6,7 @@
 /*   By: home <home@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/06 03:05:42 by home              #+#    #+#             */
-/*   Updated: 2020/07/22 00:42:00 by home             ###   ########.fr       */
+/*   Updated: 2021/03/02 21:37:16 by home             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@
 # define WIN_POS_X (2000)
 # define WIN_POS_Y (50)
 
-# define TILE_SIZE (100)
+# define TILE_SIZE (10)
 
 typedef struct	s_display
 {

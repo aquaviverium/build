@@ -6,7 +6,7 @@
 /*   By: home <home@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/16 23:38:32 by home              #+#    #+#             */
-/*   Updated: 2020/07/18 22:04:46 by home             ###   ########.fr       */
+/*   Updated: 2021/03/02 21:41:11 by home             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 
 # include "aether.h"
 
-# define SP_WIDTH (10)
-# define SP_HEIGHT (10)
+# define SP_WIDTH (100)
+# define SP_HEIGHT (100)
 
 typedef	struct	spacetime
 {

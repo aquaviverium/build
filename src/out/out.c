@@ -6,7 +6,7 @@
 /*   By: home <home@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/04 02:38:19 by home              #+#    #+#             */
-/*   Updated: 2020/07/22 01:00:20 by home             ###   ########.fr       */
+/*   Updated: 2021/03/02 21:40:28 by home             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,10 +34,10 @@ void	fill_color(int *r, int *g, int *b, int hex_color)
 **/
 void	fill_Rect(SDL_Rect *rect, int x, int y)
 {
-	rect->h = 100;
-	rect->w = 100;
-	rect->x = x * 100;
-	rect->y = y * 100;
+	rect->h = 10;
+	rect->w = 10;
+	rect->x = x * 10;
+	rect->y = y * 10;
 }
 
 void	render_loop(void)
